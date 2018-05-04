@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53ebc8c7-9564-4d80-805e-3625e995a93d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/housing.py" afterDir="false" />
-    </list>
+    <list default="true" id="53ebc8c7-9564-4d80-805e-3625e995a93d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +12,7 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="housing.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/housing.py">
+        <entry file="file://$PROJECT_DIR$/Code/housing.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -44,6 +41,11 @@
             <path>
               <item name="Kaggle" type="b2602c69:ProjectViewProjectNode" />
               <item name="Kaggle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Kaggle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Kaggle" type="462c0819:PsiDirectoryNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -108,6 +110,9 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/housing.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/housing.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
