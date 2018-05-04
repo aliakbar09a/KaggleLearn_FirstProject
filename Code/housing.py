@@ -14,10 +14,23 @@ two_columns_data = data[two_columns]
 print(two_columns_data.describe())
 print(data.columns)
 # selecting the features for training
-features = ['MSSubClass', 'MSZoning', 'LotFrontage', 'LotArea', 'Street',
-       'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig',
-       'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType',
-       'HouseStyle', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd',
-       'RoofStyle', 'RoofMatl']
+features = [ 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd',
+             'BsmtFinSF1', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF','FullBath', 'BedroomAbvGr',
+             'TotRmsAbvGrd', '1stFlrSF', '2ndFlrSF']
 X = data[features]
 y = data[['SalePrice']]
+
+from sklearn.tree import DecisionTreeRegressor
+
+# define model
+model = DecisionTreeRegressor()
+
+# fit model
+model.fit(X, y)
+
+# predicting some values
+print("Making Predictions for the following 5 houses")
+print(X.head())
+print("The predictions are")
+print(model.predict(X.head()))
+print(data.SalePrice.head())
