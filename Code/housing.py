@@ -59,3 +59,9 @@ for i in [5, 50, 100, 250, 500, 750, 1000]:
     error = mae(i, X_train, val_X,y_train, val_y)
     print(error)
 
+#using random forest
+from sklearn.ensemble import RandomForestRegressor
+forest = RandomForestRegressor()
+forest.fit(X_train, y_train)
+predicted_y = forest.predict(val_X)
+print(mean_absolute_error(val_y, predicted_y))
