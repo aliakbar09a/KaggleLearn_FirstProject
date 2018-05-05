@@ -34,3 +34,28 @@ print(X.head())
 print("The predictions are")
 print(model.predict(X.head()))
 print(data.SalePrice.head())
+
+# splitting training and test data
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error
+X_train, val_X, y_train, val_y = train_test_split(X, y, random_state=0)
+model = DecisionTreeRegressor()
+model.fit(X_train, y_train)
+predicted_y = model.predict(val_X)
+print(mean_absolute_error(val_y, predicted_y))
+
+# defining a utility function to return mae
+def mae(max_leaf, X_train, val_X, y_train, val_y):
+    model = DecisionTreeRegressor(max_leaf_nodes= max_leaf, random_state=0)
+    model.fit(X_train,y_train)
+    predicted_y = model.predict(val_X)
+    m_a_e = mean_absolute_error(val_y, predicted_y)
+    return(m_a_e)
+
+print("The errors are for different values of max leaf nodes")
+# checking error for different values of max_leaf
+for i in [5, 50, 100, 250, 500, 750, 1000]:
+    print("i = ", i)
+    error = mae(i, X_train, val_X,y_train, val_y)
+    print(error)
+
